@@ -1,0 +1,2 @@
+rootProject.name = "Pm3"
+include ':app'
