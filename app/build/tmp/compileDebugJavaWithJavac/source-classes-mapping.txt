@@ -1,0 +1,13 @@
+com/example/pm3/databinding/RecycleviewActivityCompetenciasBinding.java
+ com.example.pm3.databinding.RecycleviewActivityCompetenciasBinding
+com/example/pm3/dao/CompetenciaDao_Impl.java
+ com.example.pm3.dao.CompetenciaDao_Impl
+ com.example.pm3.dao.CompetenciaDao_Impl$1
+ com.example.pm3.dao.CompetenciaDao_Impl$2
+com/example/pm3/BuildConfig.java
+ com.example.pm3.BuildConfig
+com/example/pm3/databinding/ActivityMainBinding.java
+ com.example.pm3.databinding.ActivityMainBinding
+com/example/pm3/dbs/CompetenciaDb_Impl.java
+ com.example.pm3.dbs.CompetenciaDb_Impl
+ com.example.pm3.dbs.CompetenciaDb_Impl$1

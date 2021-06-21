@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recycleview_activity_competencias.xml",
+        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\recycleview_activity_competencias.xml"
+    }
+]
