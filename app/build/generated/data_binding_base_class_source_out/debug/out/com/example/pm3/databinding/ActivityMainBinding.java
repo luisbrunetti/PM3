@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.pm3.R;
@@ -25,7 +25,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnMainActivity;
 
   @NonNull
-  public final ContentLoadingProgressBar pbActivityMain;
+  public final ProgressBar pbActivityMain;
 
   @NonNull
   public final RecyclerView rvMainActivity;
@@ -34,7 +34,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvNoDataMainActivity;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnMainActivity,
-      @NonNull ContentLoadingProgressBar pbActivityMain, @NonNull RecyclerView rvMainActivity,
+      @NonNull ProgressBar pbActivityMain, @NonNull RecyclerView rvMainActivity,
       @NonNull TextView tvNoDataMainActivity) {
     this.rootView = rootView;
     this.btnMainActivity = btnMainActivity;
@@ -77,7 +77,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       id = R.id.pb_activity_main;
-      ContentLoadingProgressBar pbActivityMain = rootView.findViewById(id);
+      ProgressBar pbActivityMain = rootView.findViewById(id);
       if (pbActivityMain == null) {
         break missingId;
       }

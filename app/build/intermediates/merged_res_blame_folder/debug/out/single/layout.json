@@ -12,12 +12,12 @@
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\content_navigation_drawable.xml"
     },
     {
-        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_slideshow.xml",
-        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\fragment_slideshow.xml"
-    },
-    {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_navigation_drawable.xml",
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\nav_header_navigation_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_slideshow.xml",
+        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\fragment_slideshow.xml"
     },
     {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recycleview_activity_lista_puntaje.xml",

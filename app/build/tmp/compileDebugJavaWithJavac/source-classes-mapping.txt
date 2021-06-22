@@ -25,8 +25,8 @@ com/example/pm3/databinding/ContentNavigationDrawable2Binding.java
  com.example.pm3.databinding.ContentNavigationDrawable2Binding
 com/example/pm3/databinding/RecycleviewActivityListaPuntajeBinding.java
  com.example.pm3.databinding.RecycleviewActivityListaPuntajeBinding
-com/example/pm3/databinding/ActivityMainBinding.java
- com.example.pm3.databinding.ActivityMainBinding
+com/example/pm3/databinding/FragmentSecondBinding.java
+ com.example.pm3.databinding.FragmentSecondBinding
 com/example/pm3/databinding/ActivityNavigationDrawable2Binding.java
  com.example.pm3.databinding.ActivityNavigationDrawable2Binding
 com/example/pm3/databinding/ContentNavigationDrawableBinding.java
@@ -47,5 +47,5 @@ com/example/pm3/databinding/FragmentGalleryBinding.java
  com.example.pm3.databinding.FragmentGalleryBinding
 com/example/pm3/activies/SecondFragmentDirections.java
  com.example.pm3.activies.SecondFragmentDirections
-com/example/pm3/databinding/FragmentSecondBinding.java
- com.example.pm3.databinding.FragmentSecondBinding
+com/example/pm3/databinding/ActivityMainBinding.java
+ com.example.pm3.databinding.ActivityMainBinding
