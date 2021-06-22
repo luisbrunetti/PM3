@@ -5,14 +5,17 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.pm3.dao.CompetenciaDao
+import com.example.pm3.dao.EquipoDao
 import com.example.pm3.models.Competencia
+import com.example.pm3.models.Equipo
 
 @Database(
-    entities = [Competencia::class],
+    entities = [Competencia::class , Equipo::class],
     version = 1
 )
 abstract class CompetenciaDb : RoomDatabase() {
     abstract fun competenciaDao(): CompetenciaDao
+    abstract fun equipoDao(): EquipoDao
     companion object{
         @Volatile
         private var INSTANCE : CompetenciaDb? = null

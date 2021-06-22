@@ -28,7 +28,7 @@ public final class CompetenciaDao_Impl implements CompetenciaDao {
     this.__insertionAdapterOfCompetencia = new EntityInsertionAdapter<Competencia>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `competencias` (`id`,`name`) VALUES (?,?)";
+        return "INSERT OR ABORT INTO `competencias` (`id`,`name`,`cantidad`) VALUES (?,?,?)";
       }
 
       @Override
@@ -42,6 +42,11 @@ public final class CompetenciaDao_Impl implements CompetenciaDao {
           stmt.bindNull(2);
         } else {
           stmt.bindString(2, value.getName());
+        }
+        if (value.getCantidad() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getCantidad());
         }
       }
     };
@@ -95,6 +100,7 @@ public final class CompetenciaDao_Impl implements CompetenciaDao {
     try {
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+      final int _cursorIndexOfCantidad = CursorUtil.getColumnIndexOrThrow(_cursor, "cantidad");
       final List<Competencia> _result = new ArrayList<Competencia>(_cursor.getCount());
       while(_cursor.moveToNext()) {
         final Competencia _item;
@@ -102,7 +108,9 @@ public final class CompetenciaDao_Impl implements CompetenciaDao {
         _tmpId = _cursor.getString(_cursorIndexOfId);
         final String _tmpName;
         _tmpName = _cursor.getString(_cursorIndexOfName);
-        _item = new Competencia(_tmpId,_tmpName);
+        final String _tmpCantidad;
+        _tmpCantidad = _cursor.getString(_cursorIndexOfCantidad);
+        _item = new Competencia(_tmpId,_tmpName,_tmpCantidad);
         _result.add(_item);
       }
       return _result;
