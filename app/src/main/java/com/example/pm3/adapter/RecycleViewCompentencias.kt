@@ -1,6 +1,7 @@
 package com.example.pm3.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pm3.R
 import com.example.pm3.activies.ComActivies
 import com.example.pm3.models.Competencia
+import com.squareup.picasso.Picasso
+import org.w3c.dom.Text
 
 class RecycleViewCompentencias (var data: ArrayList<Competencia>, var context: Context?, val onClickListener: ComActivies):
                                     RecyclerView.Adapter<RecycleViewCompentencias.ViewHolder>() {
@@ -34,6 +37,7 @@ class RecycleViewCompentencias (var data: ArrayList<Competencia>, var context: C
         private var tvTitleName = itemView.findViewById<TextView>(R.id.tv_title)
         private var tvNumeroEquipos = itemView.findViewById<TextView>(R.id.tv_numero_equipos)
         private var ivCompetencia = itemView.findViewById<ImageView>(R.id.iv_competencias)
+        private var tvNumberTier = itemView.findViewById<TextView>(R.id.tv_num_tier)
         private var mContext = context
         private var mInterface = mComActivies
 
@@ -41,14 +45,10 @@ class RecycleViewCompentencias (var data: ArrayList<Competencia>, var context: C
             itemView.setOnClickListener(this)
         }
         fun bindData(item: Competencia){
+            Log.d("item", item.name)
             tvTitleName.text = item.name
             tvNumeroEquipos.text = item.cantidad
-            /*
-            Glide.with(mContext)
-                .load(item.url)
-                .fitCenter()
-                .centerCrop()
-                .into(ivCompetencia)*/
+            tvNumberTier.text = item.plan
         }
 
         override fun onClick(v: View?) {

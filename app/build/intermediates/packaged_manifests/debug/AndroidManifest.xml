@@ -53,6 +53,10 @@
             android:exported="false" />
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.pm3.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.pm3.firebaseinitprovider"
             android:directBootAware="true"

@@ -15,6 +15,9 @@ interface EquipoDao {
     @Query("SELECT * FROM equipo WHERE numEquipo = :numEquipo")
     fun getEquiposByCompetencia(numEquipo: Int) : List<Equipo>
 
+    @Query("SELECT * FROM equipo WHERE numEquipo = :numEquipo ORDER BY puntaje DESC")
+    fun getEquiposByCompetenciaAndOrderByPoints(numEquipo: Int): List<Equipo>
+
     @Insert
     fun insertEquipos(vararg equipo: Equipo)
 

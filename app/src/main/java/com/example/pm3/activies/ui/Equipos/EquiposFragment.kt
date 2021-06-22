@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.pm3.adapter.RecycleViewCompentencias
 import com.example.pm3.adapter.RecycleViewEquipos
 import com.example.pm3.databinding.FragmentHomeBinding
-import com.example.pm3.dbs.CompetenciaDb
-import com.example.pm3.models.Competencia
+import com.example.pm3.dbs.DatabaseRoom
 import com.example.pm3.models.Equipo
 import com.example.pm3.models.SharedPreferences.SharedPrefManager
 
@@ -34,7 +32,7 @@ class EquiposFragment : Fragment() , RecycleViewEquipos.ClickRecycleViewEquipos 
         Log.d("equipos", numEquipo.toString())
 
 
-        val roomDaoEquipo = CompetenciaDb.getDatabase(requireContext())!!.equipoDao()
+        val roomDaoEquipo = DatabaseRoom.getDatabase(requireContext())!!.equipoDao()
         val arrayEquipos  = roomDaoEquipo.getEquiposByCompetencia(numEquipo = numEquipo.toInt())
         Log.d("asd", arrayEquipos.toString())
         val recycleView = RecycleViewEquipos(arrayEquipos as ArrayList<Equipo>, requireContext(),this)
@@ -46,7 +44,7 @@ class EquiposFragment : Fragment() , RecycleViewEquipos.ClickRecycleViewEquipos 
     }
 
     override fun onClickEquipos(position: Int) {
-        Toast.makeText(requireContext(), "click",Toast.LENGTH_SHORT).show()
+
     }
 
 }

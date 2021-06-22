@@ -5,9 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.ContentLoadingProgressBar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.pm3.R;
@@ -23,13 +25,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnMainActivity;
 
   @NonNull
+  public final ContentLoadingProgressBar pbActivityMain;
+
+  @NonNull
   public final RecyclerView rvMainActivity;
 
+  @NonNull
+  public final TextView tvNoDataMainActivity;
+
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnMainActivity,
-      @NonNull RecyclerView rvMainActivity) {
+      @NonNull ContentLoadingProgressBar pbActivityMain, @NonNull RecyclerView rvMainActivity,
+      @NonNull TextView tvNoDataMainActivity) {
     this.rootView = rootView;
     this.btnMainActivity = btnMainActivity;
+    this.pbActivityMain = pbActivityMain;
     this.rvMainActivity = rvMainActivity;
+    this.tvNoDataMainActivity = tvNoDataMainActivity;
   }
 
   @Override
@@ -65,13 +76,26 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pb_activity_main;
+      ContentLoadingProgressBar pbActivityMain = rootView.findViewById(id);
+      if (pbActivityMain == null) {
+        break missingId;
+      }
+
       id = R.id.rv_main_activity;
       RecyclerView rvMainActivity = rootView.findViewById(id);
       if (rvMainActivity == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnMainActivity, rvMainActivity);
+      id = R.id.tv_no_data_main_activity;
+      TextView tvNoDataMainActivity = rootView.findViewById(id);
+      if (tvNoDataMainActivity == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnMainActivity, pbActivityMain,
+          rvMainActivity, tvNoDataMainActivity);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

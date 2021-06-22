@@ -6,5 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "competencias")
 data class Competencia(@PrimaryKey
                        val id: String,
-                       val name : String,
-                        val cantidad : String)
+                       val name: String,
+                       val cantidad: String,
+                       val plan: String )

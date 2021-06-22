@@ -7,5 +7,7 @@ import androidx.room.PrimaryKey
 data class Equipo(@PrimaryKey val id: String,
                   val numEquipo: String,
                   val name: String,
+                  val puntaje: Int,
+                  var position: Int,
                   val url: String,
-                    val anio: String)
+                  val anio: String)

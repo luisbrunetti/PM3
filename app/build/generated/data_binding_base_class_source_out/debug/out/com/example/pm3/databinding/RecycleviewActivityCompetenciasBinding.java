@@ -26,18 +26,26 @@ public final class RecycleviewActivityCompetenciasBinding implements ViewBinding
   public final TextView tvCantidad;
 
   @NonNull
+  public final TextView tvNumTier;
+
+  @NonNull
   public final TextView tvNumeroEquipos;
+
+  @NonNull
+  public final TextView tvTier;
 
   @NonNull
   public final TextView tvTitle;
 
   private RecycleviewActivityCompetenciasBinding(@NonNull CardView rootView,
-      @NonNull ImageView ivCompetencias, @NonNull TextView tvCantidad,
-      @NonNull TextView tvNumeroEquipos, @NonNull TextView tvTitle) {
+      @NonNull ImageView ivCompetencias, @NonNull TextView tvCantidad, @NonNull TextView tvNumTier,
+      @NonNull TextView tvNumeroEquipos, @NonNull TextView tvTier, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.ivCompetencias = ivCompetencias;
     this.tvCantidad = tvCantidad;
+    this.tvNumTier = tvNumTier;
     this.tvNumeroEquipos = tvNumeroEquipos;
+    this.tvTier = tvTier;
     this.tvTitle = tvTitle;
   }
 
@@ -80,9 +88,21 @@ public final class RecycleviewActivityCompetenciasBinding implements ViewBinding
         break missingId;
       }
 
+      id = R.id.tv_num_tier;
+      TextView tvNumTier = rootView.findViewById(id);
+      if (tvNumTier == null) {
+        break missingId;
+      }
+
       id = R.id.tv_numero_equipos;
       TextView tvNumeroEquipos = rootView.findViewById(id);
       if (tvNumeroEquipos == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_tier;
+      TextView tvTier = rootView.findViewById(id);
+      if (tvTier == null) {
         break missingId;
       }
 
@@ -93,7 +113,7 @@ public final class RecycleviewActivityCompetenciasBinding implements ViewBinding
       }
 
       return new RecycleviewActivityCompetenciasBinding((CardView) rootView, ivCompetencias,
-          tvCantidad, tvNumeroEquipos, tvTitle);
+          tvCantidad, tvNumTier, tvNumeroEquipos, tvTier, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pm3.adapter.RecycleViewCompentencias
 import com.example.pm3.databinding.ActivityMainBinding
-import com.example.pm3.dbs.CompetenciaDb
+import com.example.pm3.dbs.DatabaseRoom
 import com.example.pm3.models.Competencia
 import com.example.pm3.models.Equipo
 import com.example.pm3.models.SharedPreferences.SharedPrefManager
@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity(), ComActivies{
     private lateinit var mFireStore: FirebaseFirestore
     private lateinit var mFirebaseDatabase: FirebaseDatabase
     private fun ClearDatabase(){
-        val roomDao = CompetenciaDb.getDatabase(this)!!.competenciaDao()
-        val roomDaoEquipo = CompetenciaDb.getDatabase(applicationContext)!!.equipoDao()
+        val roomDao = DatabaseRoom.getDatabase(this)!!.competenciaDao()
+        val roomDaoEquipo = DatabaseRoom.getDatabase(applicationContext)!!.equipoDao()
         val arrayCompetencia = roomDao.getAllCompetencias()
         val arrayEquipos = roomDaoEquipo.getAllEquipos()
         for(a in arrayCompetencia){
@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity(), ComActivies{
         setContentView(binding.root)
         ClearDatabase()
         binding.btnMainActivity.setOnClickListener {
+            binding.pbActivityMain.visibility = View.VISIBLE
+            binding.tvNoDataMainActivity.visibility = View.GONE
             binding.btnMainActivity.visibility = View.GONE
             binding.rvMainActivity.visibility = View.VISIBLE
             mFireStore = FirebaseFirestore.getInstance()
@@ -56,8 +58,8 @@ class MainActivity : AppCompatActivity(), ComActivies{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     Log.d(TAG, "ONCREATE")
                     val arrayDoc = ArrayList<Competencia>()
-                    val roomDaoCompetencia = CompetenciaDb.getDatabase(applicationContext)!!.competenciaDao()
-                    val roomDaoEquipo = CompetenciaDb.getDatabase(applicationContext)!!.equipoDao()
+                    val roomDaoCompetencia = DatabaseRoom.getDatabase(applicationContext)!!.competenciaDao()
+                    val roomDaoEquipo = DatabaseRoom.getDatabase(applicationContext)!!.equipoDao()
                     var count = 0
                     for(snap in snapshot.children){
                         Log.d("snap", snap.child("teams").children.toString())
@@ -65,12 +67,19 @@ class MainActivity : AppCompatActivity(), ComActivies{
                         for(team in snap.child("teams").children){
                             Log.d("team", team.child("name").value.toString())
                             val equipo =  Equipo(team.child("id").value.toString(),count.toString(), team.child("name").value.toString(),
+                                team.child("points").value.toString().toInt(),0,
                                 team.child("crestUrl").value.toString(), team.child("founded").value.toString())
                             arrayEquipo.add(equipo)
                             roomDaoEquipo.insertEquipos(equipo)
                         }
                         Log.d(TAG,snap.child("name").value.toString())
-                        val competencia = Competencia(snap.child("id").value.toString(),snap.child("name").value.toString(),snap.child("cantidad").value.toString())
+                        val plan = snap.child("plan").value.toString()
+                        val date = snap.child("currentSeason").child("startDate").value.toString()
+                        Log.d("date",date)
+                        val listSplit = date.split("-")
+                        val concat = snap.child("name").value.toString().plus("-").plus(listSplit[0])
+                        Log.d("concant", concat)
+                        val competencia = Competencia(snap.child("id").value.toString(),concat,snap.child("cantidad").value.toString(),plan)
                         arrayDoc.add(competencia)
                         roomDaoCompetencia.insertCompetencia(competencia)
                         Log.d("equipo",arrayEquipo.toString())
@@ -88,7 +97,8 @@ class MainActivity : AppCompatActivity(), ComActivies{
     }
 
     private fun llenarDatos() {
-        val roomDao = CompetenciaDb.getDatabase(this)!!.competenciaDao()
+        binding.pbActivityMain.visibility = View.GONE
+        val roomDao = DatabaseRoom.getDatabase(this)!!.competenciaDao()
         val array = roomDao.getAllCompetencias()
         //Log.d("array", array.toString())
 
