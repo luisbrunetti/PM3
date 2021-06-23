@@ -1,20 +1,3 @@
-com/example/pm3/dbs/DatabaseRoom_Impl.java
- com.example.pm3.dbs.DatabaseRoom_Impl
- com.example.pm3.dbs.DatabaseRoom_Impl$1
-com/example/pm3/dao/EquipoDao_Impl.java
- com.example.pm3.dao.EquipoDao_Impl
- com.example.pm3.dao.EquipoDao_Impl$1
- com.example.pm3.dao.EquipoDao_Impl$2
-com/example/pm3/BuildConfig.java
- com.example.pm3.BuildConfig
-com/example/pm3/dao/CompetenciaDao_Impl.java
- com.example.pm3.dao.CompetenciaDao_Impl
- com.example.pm3.dao.CompetenciaDao_Impl$1
- com.example.pm3.dao.CompetenciaDao_Impl$2
-com/example/pm3/activies/ui/Equipos/EquiposFragmentArgs.java
- com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs
- com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs$1
- com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs$Builder
 com/example/pm3/databinding/RecycleviewActivityEquiposBinding.java
  com.example.pm3.databinding.RecycleviewActivityEquiposBinding
 com/example/pm3/activies/FirstFragmentDirections.java
@@ -25,8 +8,11 @@ com/example/pm3/databinding/ContentNavigationDrawable2Binding.java
  com.example.pm3.databinding.ContentNavigationDrawable2Binding
 com/example/pm3/databinding/RecycleviewActivityListaPuntajeBinding.java
  com.example.pm3.databinding.RecycleviewActivityListaPuntajeBinding
-com/example/pm3/databinding/FragmentSecondBinding.java
- com.example.pm3.databinding.FragmentSecondBinding
+com/example/pm3/databinding/ActivityMainBinding.java
+ com.example.pm3.databinding.ActivityMainBinding
+com/example/pm3/dbs/DatabaseRoom_Impl.java
+ com.example.pm3.dbs.DatabaseRoom_Impl
+ com.example.pm3.dbs.DatabaseRoom_Impl$1
 com/example/pm3/databinding/ActivityNavigationDrawable2Binding.java
  com.example.pm3.databinding.ActivityNavigationDrawable2Binding
 com/example/pm3/databinding/ContentNavigationDrawableBinding.java
@@ -35,10 +21,20 @@ com/example/pm3/databinding/FragmentHomeBinding.java
  com.example.pm3.databinding.FragmentHomeBinding
 com/example/pm3/databinding/FragmentFirstBinding.java
  com.example.pm3.databinding.FragmentFirstBinding
+com/example/pm3/activies/ui/Equipos/EquiposFragmentArgs.java
+ com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs
+ com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs$1
+ com.example.pm3.activies.ui.Equipos.EquiposFragmentArgs$Builder
 com/example/pm3/databinding/FragmentSlideshowBinding.java
  com.example.pm3.databinding.FragmentSlideshowBinding
 com/example/pm3/databinding/RecycleviewActivityCompetenciasBinding.java
  com.example.pm3.databinding.RecycleviewActivityCompetenciasBinding
+com/example/pm3/dao/CompetenciaDao_Impl.java
+ com.example.pm3.dao.CompetenciaDao_Impl
+ com.example.pm3.dao.CompetenciaDao_Impl$1
+ com.example.pm3.dao.CompetenciaDao_Impl$2
+com/example/pm3/BuildConfig.java
+ com.example.pm3.BuildConfig
 com/example/pm3/databinding/ActivityNavigationDrawableBinding.java
  com.example.pm3.databinding.ActivityNavigationDrawableBinding
 com/example/pm3/databinding/NavHeaderNavigationDrawableBinding.java
@@ -47,5 +43,9 @@ com/example/pm3/databinding/FragmentGalleryBinding.java
  com.example.pm3.databinding.FragmentGalleryBinding
 com/example/pm3/activies/SecondFragmentDirections.java
  com.example.pm3.activies.SecondFragmentDirections
-com/example/pm3/databinding/ActivityMainBinding.java
- com.example.pm3.databinding.ActivityMainBinding
+com/example/pm3/dao/EquipoDao_Impl.java
+ com.example.pm3.dao.EquipoDao_Impl
+ com.example.pm3.dao.EquipoDao_Impl$1
+ com.example.pm3.dao.EquipoDao_Impl$2
+com/example/pm3/databinding/FragmentSecondBinding.java
+ com.example.pm3.databinding.FragmentSecondBinding

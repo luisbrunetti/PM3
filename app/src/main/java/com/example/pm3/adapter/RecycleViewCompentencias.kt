@@ -14,14 +14,15 @@ import com.example.pm3.models.Competencia
 import com.squareup.picasso.Picasso
 import org.w3c.dom.Text
 
+//RecycleView para poder visualizar las competencias
 class RecycleViewCompentencias (var data: ArrayList<Competencia>, var context: Context?, val onClickListener: ComActivies):
                                     RecyclerView.Adapter<RecycleViewCompentencias.ViewHolder>() {
-    private var mData: ArrayList<Competencia> = this.data
-    private var mInflater:LayoutInflater = LayoutInflater.from(this.context)
+    private var mData: ArrayList<Competencia> = this.data //Guardando la lista de objetos competencnai en una clase
+    private var mInflater:LayoutInflater = LayoutInflater.from(this.context) //Guardadno el layout
     private var mcontext: Context? = this.context
-    private val mOnClickListener = this.onClickListener
+    private val mOnClickListener = this.onClickListener  //Guardando la interface en un atributo de la clase
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = mInflater.inflate(R.layout.recycleview_activity_competencias, null)
+        val view: View = mInflater.inflate(R.layout.recycleview_activity_competencias, null) //Asignado el layout que se utilizara en el viewHolder
         return ViewHolder(view,mOnClickListener,mcontext!!)
     }
 
@@ -42,15 +43,17 @@ class RecycleViewCompentencias (var data: ArrayList<Competencia>, var context: C
         private var mInterface = mComActivies
 
         init {
+            //Asignando texto con la información del objeto
             itemView.setOnClickListener(this)
         }
         fun bindData(item: Competencia){
+            //Asignando texto con la información del objeto
             Log.d("item", item.name)
             tvTitleName.text = item.name
             tvNumeroEquipos.text = item.cantidad
             tvNumberTier.text = item.plan
         }
-
+        //Usando la función onclicklistener para enviar la orden al activity a traves de la interface creada
         override fun onClick(v: View?) {
             mInterface.onClickListenerRecycleView(adapterPosition)
         }

@@ -22,7 +22,7 @@ class NavigationDrawable : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //Se declara un binding con el activity Navigation Drawable
         binding = ActivityNavigationDrawable2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarNavigationDrawable.toolbar)
@@ -30,18 +30,20 @@ class NavigationDrawable : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+        //Se inicializa el Nav Controller
         val navController = findNavController(R.id.nav_host_fragment_content_navigation_drawable2)
-
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery
             ), drawerLayout
         )
+        //Se inicia el navController con la configuración del menu
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        //Se inicializa el menu del navigation drawable
         menuInflater.inflate(R.menu.navigation_drawable, menu)
         return true
     }

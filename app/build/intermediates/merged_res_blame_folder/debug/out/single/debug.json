@@ -124,12 +124,12 @@
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\layout_recycleview_activity_competencias.xml.flat",
-        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\recycleview_activity_competencias.xml"
-    },
-    {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_featured_play_list_24.png.flat",
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_featured_play_list_24.png"
+    },
+    {
+        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\layout_recycleview_activity_competencias.xml.flat",
+        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\recycleview_activity_competencias.xml"
     },
     {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -168,12 +168,12 @@
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_navigation_drawable2.xml.flat",
-        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\activity_navigation_drawable2.xml"
-    },
-    {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_navigation_drawable2.xml.flat",
+        "source": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\src\\main\\res\\layout\\activity_navigation_drawable2.xml"
     },
     {
         "merged": "C:\\Users\\luisb\\OneDrive\\Documents\\AndroidStudio\\Pm3\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_navigation_drawable.xml.flat",

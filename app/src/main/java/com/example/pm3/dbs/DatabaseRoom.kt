@@ -13,11 +13,12 @@ import com.example.pm3.models.Equipo
     entities = [Competencia::class , Equipo::class],
     version = 1
 )
+//Craendo Base de datos Room
 abstract class DatabaseRoom : RoomDatabase() {
-    abstract fun competenciaDao(): CompetenciaDao
-    abstract fun equipoDao(): EquipoDao
+    abstract fun competenciaDao(): CompetenciaDao //Función abstracta que tiene las funciones DAO del data class Competencia
+    abstract fun equipoDao(): EquipoDao //Función abstracta que tiene las funciones DAO del data class Equipo
     companion object{
-        @Volatile
+        @Volatile //Implementando singleton para llamada ala instancia de la base dedatos
         private var INSTANCE : DatabaseRoom? = null
         fun getDatabase(context : Context): DatabaseRoom? {
             val tempInstance = INSTANCE

@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Equipo(@PrimaryKey val id: String,
+data class Equipo(@PrimaryKey val id: String, //Data class del objeo equipo
                   val numEquipo: String,
                   val name: String,
                   val puntaje: Int,
