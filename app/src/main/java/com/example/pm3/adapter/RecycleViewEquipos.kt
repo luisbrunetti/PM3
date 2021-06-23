@@ -48,13 +48,7 @@ class RecycleViewEquipos (var data: ArrayList<Equipo>, var context: Context? , v
             tvNombreEquipo.text = item.name
             tvAnioFundado.text = item.anio
             // usando picasso para descargar la imagen de la web
-            if(item.url.isNotEmpty()){
-                Picasso.get()
-                    .load("https://i.pinimg.com/736x/2c/f2/b7/2cf2b7ee43f7706a5746949651bb2507.jpg")
-                    .into(ivImagenEquipo)
-            }else{
-                ivImagenEquipo.setImageResource(R.drawable.trophy)
-            }
+            ivImagenEquipo.setImageResource(R.drawable.olregion)
 
 
         }

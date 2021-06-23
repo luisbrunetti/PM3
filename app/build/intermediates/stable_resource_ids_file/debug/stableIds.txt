@@ -2213,6 +2213,7 @@ com.example.pm3:attr/drawableRightCompat = 0x7f030123
 com.example.pm3:color/primary_dark_material_light = 0x7f0500c2
 com.example.pm3:attr/listPopupWindowStyle = 0x7f03021e
 com.example.pm3:color/notification_icon_bg_color = 0x7f0500c0
+com.example.pm3:drawable/olregion = 0x7f0700ad
 com.example.pm3:color/notification_action_color_filter = 0x7f0500bf
 com.example.pm3:color/switch_thumb_disabled_material_light = 0x7f0500d4
 com.example.pm3:color/mtrl_textinput_focused_box_stroke_color = 0x7f0500bd

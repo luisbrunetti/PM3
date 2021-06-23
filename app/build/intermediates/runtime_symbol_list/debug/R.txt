@@ -1763,6 +1763,7 @@ int drawable notification_template_icon_bg 0x7f0700a4
 int drawable notification_template_icon_low_bg 0x7f0700a5
 int drawable notification_tile_bg 0x7f0700a6
 int drawable notify_panel_notification_icon_bg 0x7f0700a7
+int drawable olregion 0x7f0700ad
 int drawable side_nav_bar 0x7f0700a8
 int drawable test_custom_background 0x7f0700a9
 int drawable tooltip_frame_dark 0x7f0700aa
